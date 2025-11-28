@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="LibraryAPI.AddBookTest">
+      <class name="MapPojo.MAPAPIRestAssuredAPI">
         <methods>
-          <include name="addBook"/>
+          <include name="addMap"/>
         </methods>
-      </class> <!-- LibraryAPI.AddBookTest -->
+      </class> <!-- MapPojo.MAPAPIRestAssuredAPI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

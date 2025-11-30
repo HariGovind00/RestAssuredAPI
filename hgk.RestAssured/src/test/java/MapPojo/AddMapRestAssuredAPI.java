@@ -13,7 +13,7 @@ import io.restassured.response.Response;
 
 
 
-public class MAPAPIRestAssuredAPI 
+public class AddMapRestAssuredAPI 
 {
 	@Test
 	public void addMap()

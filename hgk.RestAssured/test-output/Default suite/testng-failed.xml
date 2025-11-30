@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MapPojo.MAPAPIRestAssuredAPI">
+      <class name="LetsShopEcom_E2E_RestAssuredAPI.PlaceOrder">
         <methods>
-          <include name="addMap"/>
+          <include name="bookOrder"/>
         </methods>
-      </class> <!-- MapPojo.MAPAPIRestAssuredAPI -->
+      </class> <!-- LetsShopEcom_E2E_RestAssuredAPI.PlaceOrder -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,6 +2,7 @@ package LetsShopEcomPojoClass;
 
 public class LoginSerializationPojo {
 	private String userEmail;
+	private String userPassword;
 
 	public String getUserEmail() {
 		return userEmail;
@@ -18,6 +19,4 @@ public class LoginSerializationPojo {
 	public void setUserPassword(String userPassword) {
 		this.userPassword = userPassword;
 	}
-
-	private String userPassword;
 }

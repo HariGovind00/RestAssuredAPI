@@ -3,6 +3,8 @@ package LetsShopEcomPojoClass;
 public class LoginDeserializationPOJO
 {
 	private String token;
+	private String userId;
+	private String message;
 	public String getToken() {
 		return token;
 	}
@@ -21,6 +23,4 @@ public class LoginDeserializationPOJO
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	private String userId;
-	private String message;
 }

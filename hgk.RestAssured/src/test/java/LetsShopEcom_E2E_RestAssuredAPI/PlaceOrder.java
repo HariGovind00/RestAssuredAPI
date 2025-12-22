@@ -11,19 +11,19 @@ import io.restassured.specification.ResponseSpecification;
 
 import java.util.Arrays;
 
-public class PlaceOrder {
+public class PlaceOrder extends LoginWebSite{
 
 	@Test
-	public void bookOrder() {
+	public DeleteOrder bookOrder() {
 		// Calling serialization pojo class to set value.
 		PlaceOrderCousechild order = new PlaceOrderCousechild();
 		order.setCountry("India");
-		order.setProductOrderedId("68a961959320a140fe1ca57e");
+		order.setProductOrderedId("692a30485008f6a90941065a");
 		MainPlaceOrderSerializationPOJO mainorder = new MainPlaceOrderSerializationPOJO();
 		mainorder.setOrders(Arrays.asList(order));
 
 		// Request Specification
-		RequestSpecification Simplifiedreq = LoginPage.RequestSpecwithAuth();
+		RequestSpecification Simplifiedreq = LoginPage.RequestSpecwithAuth(loginTokenId);
 		// Response Specification
 		ResponseSpecification response = LoginPage.OrderPlacedResp();
 
@@ -37,6 +37,8 @@ public class PlaceOrder {
 		String productid = js.getString("productOrderId");
 		System.out.println("Order id=" + orderid);
 		System.out.println("Product id=" + productid);
+		
+		return new DeleteOrder(orderid,productid);
 	}
 
 }

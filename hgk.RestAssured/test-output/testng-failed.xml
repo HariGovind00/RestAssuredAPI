@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="LetsShopEcom_E2E_RestAssuredAPI.PlaceOrder">
+      <class name="CucumberTestRunner.PostAPITestRunner">
         <methods>
-          <include name="bookOrder"/>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
         </methods>
-      </class> <!-- LetsShopEcom_E2E_RestAssuredAPI.PlaceOrder -->
+      </class> <!-- CucumberTestRunner.PostAPITestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

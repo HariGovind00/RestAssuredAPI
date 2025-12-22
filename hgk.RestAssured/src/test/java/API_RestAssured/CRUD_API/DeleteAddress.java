@@ -3,20 +3,21 @@ package API_RestAssured.CRUD_API;
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.*;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
-public class DeleteAddress
+import GenericUtilityPack.EnumClass;
+import hgk.RestAssured.DeleteAddressPayload;
+
+public class DeleteAddress extends PostGetMapAddress
 {
-@Test
-public void deleteExistingAddress()
+@Test(dependsOnMethods = "AddAddressAPI")
+public void deleteExistingAddress() throws IOException
 {
-	RestAssured.baseURI="https://rahulshettyacademy.com";
-	given().log().all().header("contentType","application/json").queryParam("key","qaclick123")
-	.body("{\r\n"
-			+ "    \"place_id\":\"b73be8d11bab20b376364e10636beaea\"\r\n"
-			+ "}\r\n"
-			+ "")
-	.when().delete("/maps/api/place/delete/json")
+	given().log().all().spec(addPlace())
+	.body(DeleteAddressPayload.deletePayload(placeid))
+	.when().delete(EnumClass.deletePlaceAPI.getAPIResource())
 	.then().log().all().assertThat().statusCode(200);
 }
 }

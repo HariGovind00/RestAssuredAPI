@@ -5,10 +5,11 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(features = "src/test/java/CucumberFeatureFile/PostAPI.feature",
+plugin = "json:target/jsonReports/json-cucumber-report.json",
 glue = "CucumberStepDefinationFile",
-monochrome = true,
-tags = "@AddPlaceAPI")
+tags = "@AddPlaceAPI",
+monochrome = true)
 public class PostAPITestRunner extends AbstractTestNGCucumberTests
 {
 
-}
+} 

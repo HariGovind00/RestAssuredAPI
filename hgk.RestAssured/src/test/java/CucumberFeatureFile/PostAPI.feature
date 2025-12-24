@@ -9,11 +9,17 @@ Feature: Title of your feature
     Then verify the response is Success with "200" status code
     And Verify Response message as "status" as "OK"
     And Verify Get "getPlaceAPI" API  "place_id" and verify the "<name>"
+    And Verify Delete "deletePlaceAPI"
     Examples:
     	|name				|language			|address									|
     	|RestAssured|	Eng-In			|World Crossinh Center 501|
     #	|RestAssured|	French-In		|World Crossinh Center 502|
     #	|RestAssured|	German-In		|World Crossinh Center 502|
+    
+    @DeletePlaceAPI
+    Scenario: Delete Place API
+    Given Verify Delete place API
+ 
   
     
     

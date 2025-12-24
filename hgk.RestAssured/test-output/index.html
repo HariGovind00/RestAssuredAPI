@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1003133010\testng-customsuite.xml</span>
+                    <span>C:\Users\DELL\AppData\Local\Temp\testng-eclipse-346772716\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Default_suite" class="navigator-link ">
-                    <span>1 group</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="CucumberTestRunner.PostAPITestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Add the Address to Library API&quot;, &quot;Title of your feature&quot;)">runScenario("Add the Address to Library API", "Title of your feature")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="OAuthAPI.OAuth2Code_AccessToken" class="method navigator-link" hash-for-method="OAuth2Code_AccessToken">OAuth2Code_AccessToken</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,17 +121,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">CucumberTestRunner.PostAPITestRunner</span>
+              <span class="class-name">OAuthAPI.OAuth2Code_AccessToken</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Add the Address to Library API&quot;, &quot;Title of your feature&quot;)">
-                  </a> <!-- runScenario("Add the Address to Library API", "Title of your feature") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Add the Address to Library API","Title of your feature")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
+                  <a name="OAuth2Code_AccessToken">
+                  </a> <!-- OAuth2Code_AccessToken -->
+                  <span class="method-name">OAuth2Code_AccessToken</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -139,7 +136,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1003133010\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\DELL\AppData\Local\Temp\testng-eclipse-346772716\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -148,7 +145,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;CucumberTestRunner.PostAPITestRunner&quot;/&gt;
+      &lt;class name=&quot;OAuthAPI.OAuth2Code_AccessToken&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;OAuth2Code_AccessToken&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- OAuthAPI.OAuth2Code_AccessToken --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -172,14 +173,6 @@
             <span class="header-content">Groups for Default suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">cucumber</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">runScenario</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Default_suite" class="panel">
@@ -198,14 +191,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'CucumberTestRunner.PostAPITestRunner')
-data.setCell(0, 3, 7450);
+data.setCell(0, 1, 'OAuth2Code_AccessToken')
+data.setCell(0, 2, 'OAuthAPI.OAuth2Code_AccessToken')
+data.setCell(0, 3, 9511);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -231,19 +224,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">CucumberTestRunner.PostAPITestRunner</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@391515c7)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
+              <div class="chronological-class-name">OAuthAPI.OAuth2Code_AccessToken</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">runScenario("Add the Address to Library API", "Title of your feature")</span>
-                <span class="method-start">456 ms</span>
+                <span class="method-name">OAuth2Code_AccessToken</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDownClass</span>
-                <span class="method-start">7918 ms</span>
-              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

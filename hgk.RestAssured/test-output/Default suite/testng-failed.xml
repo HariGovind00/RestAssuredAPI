@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CucumberTestRunner.PostAPITestRunner">
+      <class name="OAuthAPI.OAuth2Code_AccessToken">
         <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="OAuth2Code_AccessToken"/>
         </methods>
-      </class> <!-- CucumberTestRunner.PostAPITestRunner -->
+      </class> <!-- OAuthAPI.OAuth2Code_AccessToken -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

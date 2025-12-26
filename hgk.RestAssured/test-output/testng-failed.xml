@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="OAuthAPI.OAuth2Code_AccessToken">
+      <class name="Practice_POJO_Deserialization.GetAPIMainClassUsingDeserialization">
         <methods>
-          <include name="OAuth2Code_AccessToken"/>
+          <include name="deserializeTest"/>
         </methods>
-      </class> <!-- OAuthAPI.OAuth2Code_AccessToken -->
+      </class> <!-- Practice_POJO_Deserialization.GetAPIMainClassUsingDeserialization -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

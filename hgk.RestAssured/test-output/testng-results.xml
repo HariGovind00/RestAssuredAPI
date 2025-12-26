@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-24T11:15:29 IST" name="Default suite" finished-at="2025-12-24T11:15:38 IST" duration-ms="9812">
+  <suite started-at="2025-12-26T22:06:54 IST" name="Default suite" finished-at="2025-12-26T22:07:00 IST" duration-ms="5954">
     <groups>
     </groups>
-    <test started-at="2025-12-24T11:15:29 IST" name="Default test" finished-at="2025-12-24T11:15:38 IST" duration-ms="9812">
-      <class name="OAuthAPI.OAuth2Code_AccessToken">
-        <test-method signature="OAuth2Code_AccessToken()[pri:0, instance:OAuthAPI.OAuth2Code_AccessToken@48f2bd5b]" started-at="2025-12-24T11:15:29 IST" name="OAuth2Code_AccessToken" finished-at="2025-12-24T11:15:38 IST" duration-ms="9511" status="PASS">
+    <test started-at="2025-12-26T22:06:54 IST" name="Default test" finished-at="2025-12-26T22:07:00 IST" duration-ms="5954">
+      <class name="Practice_POJO_Deserialization.GetAPIMainClassUsingDeserialization">
+        <test-method signature="deserializeTest()[pri:0, instance:Practice_POJO_Deserialization.GetAPIMainClassUsingDeserialization@1bb5a082]" started-at="2025-12-26T22:06:55 IST" name="deserializeTest" finished-at="2025-12-26T22:07:00 IST" duration-ms="5861" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OAuth2Code_AccessToken -->
-      </class> <!-- OAuthAPI.OAuth2Code_AccessToken -->
+        </test-method> <!-- deserializeTest -->
+      </class> <!-- Practice_POJO_Deserialization.GetAPIMainClassUsingDeserialization -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

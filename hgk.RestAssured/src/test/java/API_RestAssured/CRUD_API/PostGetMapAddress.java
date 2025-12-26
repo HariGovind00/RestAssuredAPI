@@ -18,7 +18,7 @@ public class PostGetMapAddress extends LibraryAPIUtils
 @Test
 public static void AddAddressAPI() throws IOException
 {
-	String response=given().log().all().spec(addPlace()).body(AddAddressPostClass.Addpayload())
+	String response=given().log().all().spec(addPlace()).body(AddAddressPostClass.AddMapConvertedFromJsonToHashMap())
 			.when().post(EnumClass.addPlaceAPI.getAPIResource())
 			.then().log().all().assertThat()
 			.statusCode(200).body("scope", equalTo("APP")).header("Server","Apache/2.4.52 (Ubuntu)")

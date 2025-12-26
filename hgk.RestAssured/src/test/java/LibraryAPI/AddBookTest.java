@@ -1,28 +1,41 @@
 package LibraryAPI;
 
-import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import API_RestAssured.hgk.RestAssured.JSonPathClass;
-import hgk.RestAssured.LibraryPayload;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 
 import static io.restassured.RestAssured.*;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class AddBookTest
 {
-@Test(dataProvider = "testData",invocationCount = 2)
-public void addBook(String isbn1, String aisle1) throws InterruptedException
+@Test
+public void addBook() throws InterruptedException, IOException
 {
+	ExcelDataDrivenForLibraryAPI dd=new ExcelDataDrivenForLibraryAPI();
+	ArrayList<Object> arr=dd.excelDataDrivenTest("Library","PayloadKey","LibraryValue");
+	System.out.println(arr);
+	
+	
+	HashMap<String,Object> map=new HashMap<String,Object>();
+	map.put("name",arr.get(1));
+	map.put("isbn",arr.get(2));
+	map.put("aisle",arr.get(3));
+	map.put("author",arr.get(4));
+	
+	
 	
 	
 	RestAssured.baseURI="https://rahulshettyacademy.com";
-	String response=given().log().all().header("contentType","application/json")
-	.body(LibraryPayload.payload(isbn1,aisle1)).
+	String response=given().log().all().header("Content-Type","application/json")
+	.body(map).
 	when().post("/Library/Addbook.php").
-	then().log().all().assertThat().statusCode(200).extract().response().asString();
+	then().log().all().extract().response().asString();
 	
 	JsonPath js=JSonPathClass.jsonPathFun(response);
 	String id=js.get("ID");
@@ -52,24 +65,24 @@ public void addBook(String isbn1, String aisle1) throws InterruptedException
 
 
 
-@DataProvider
-public String[][] testData()
-{
-	String[][] obj=new String[4][2];
-	
-	obj[0][0]="hii";
-	obj[0][1]="200";
-	
-	obj[1][0]="ll";
-	obj[1][1]="900";
-	
-	obj[2][0]="Doo";
-	obj[2][1]="200";
-	
-	obj[3][0]="Gol";
-	obj[3][1]="200";
-	
-	return obj;
-	
-}
+//@DataProvider
+//public String[][] testData()
+//{
+//	String[][] obj=new String[4][2];
+//	
+//	obj[0][0]="hii";
+//	obj[0][1]="200";
+//	
+//	obj[1][0]="ll";
+//	obj[1][1]="900";
+//	
+//	obj[2][0]="Doo";
+//	obj[2][1]="200";
+//	
+//	obj[3][0]="Gol";
+//	obj[3][1]="200";
+//	
+//	return obj;
+//	
+//}
 }

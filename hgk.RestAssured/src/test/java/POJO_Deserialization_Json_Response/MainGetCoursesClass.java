@@ -8,6 +8,7 @@ public class MainGetCoursesClass
 	private String expertise;
 	private ParentClassCourses courses;
 	private String linkedIn;
+	
 	public String getInstructor() {
 		return instructor;
 	}
